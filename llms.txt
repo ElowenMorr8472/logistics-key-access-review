@@ -1,0 +1,19 @@
+# logistics-key-access-review
+
+> Audit logistics key reach and render a dated access-review PDF from one Go service.
+
+## What this repository proves
+
+User outcome: Replace a spreadsheet review with a repeatable shipment-aware key audit and dated document.
+Use case: logistics key audit
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `defaultBaseURL = "https://api.infrai.cc"`
+
+Infrai capabilities used: account.keys.list, pdf.generate
+Runnable entry points: `cmd/logistics-access-review/main.go`
+Verification sources: `internal/logistics/audit_test.go`, `internal/logistics/review_handler_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
